@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        min-height: 100vh;
+        padding: 8px;
+      }
+
+      kl-auth {
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <kl-auth
+      customer="idos"
+      enable-camera-instructions
+      key="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqD++WB3a1X7cjki6zd1mJwItmROhEenD0JIkQ5XoXmvpmWLbZGjm/r8Vvviit2zU/mRPkvMzzR0WmB2/QoOc/oD/tmEFZaB5fm1E286H/9yRYFPnXOqv4HXVA4dk5sS73X4p7Q2pLgYHVGTXmcQIVR/ZrEda8JYuJ7GL4fvtevce6PLFLrUrI3uEiAjNgmLcFeSSoMCtIZ0VPtMSNPeqniXmDndfcNBxjSLGhk26R1xJRwy26f8bdputiTRjuoJEju0vPPg/33qRMu1H6C1kQPkLXxd/rRD3iLnee9XjdynuKk9mqhcL/CEscmCabphtAt55dUHTvs5EQkROkV0JtQIDAQAB"
+      key-id="alias/kl-core-production-authentication-service-image-key-sandbox"
+      lang="en"
+      size="375"
+      theme="light"
+      ws-url="wss://authentication-service-sandbox.eks.core-production.keyless.technology"
+    ></kl-auth>
+    <script src="./node_modules/@keyless/sdk-web-components/elements/auth/auth-element.iife.js"></script>
+    <script>
+      const auth = document.querySelector('kl-auth')
+
+      //navigator.clipboard.readText().then(username => {
+        auth.username = "555";
+        
+        auth.addEventListener('error', (event) => {
+          console.log(event.message)
+        })
+
+        auth.addEventListener('finished', (event) => {
+          console.log(event.data)
+        })
+      //});
+    </script>
+  </body>
+</html>
