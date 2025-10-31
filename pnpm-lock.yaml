@@ -9,22 +9,22 @@ importers:
   .:
     dependencies:
       '@keyless/sdk-web':
-        specifier: 2.1.0-rc.0
-        version: 2.1.0-rc.0
+        specifier: 2.1.0-rc.1
+        version: 2.1.0-rc.1
       '@keyless/sdk-web-components':
-        specifier: 2.1.0-rc.0
-        version: 2.1.0-rc.0
+        specifier: 2.1.0-rc.1
+        version: 2.1.0-rc.1
 
 packages:
 
-  '@keyless/sdk-web-components@2.1.0-rc.0':
-    resolution: {integrity: sha512-uYzIzl87dJJbNgmbVpHbyt5qnl9rC5prbYxFUpGr/I7dXUDnPvuUqNIIV0bHMG7h621F3AcjCfVem374nANd8g==}
+  '@keyless/sdk-web-components@2.1.0-rc.1':
+    resolution: {integrity: sha512-k5wP49GqrLsD75ugJUhEdVcV/wd2WB2qhSGM+nsqkTMDkSCICVcU7kuUDTpDN5zBIzdUAJylzJDZ/9J8BeEm/A==}
 
-  '@keyless/sdk-web@2.1.0-rc.0':
-    resolution: {integrity: sha512-vcY6wtvrpeCIpRGnsO6os7WEhYQMhOKdk5kiWSLSMT0C53t1G2N4Bx6BhPkn6jNDD4xfov7kIqf7THzOpTNhEA==}
+  '@keyless/sdk-web@2.1.0-rc.1':
+    resolution: {integrity: sha512-H19XFU9x2sfyfkrJ2PfogQ19uiiovxsNneJPo38hkxaXChiLN76pBgqOzjGJU6A9XthyLZuCMoveVEqVXqnIvw==}
 
 snapshots:
 
-  '@keyless/sdk-web-components@2.1.0-rc.0': {}
+  '@keyless/sdk-web-components@2.1.0-rc.1': {}
 
-  '@keyless/sdk-web@2.1.0-rc.0': {}
+  '@keyless/sdk-web@2.1.0-rc.1': {}
