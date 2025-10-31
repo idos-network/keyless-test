@@ -34,12 +34,17 @@
       theme="light"
       ws-url="wss://authentication-service-sandbox.eks.core-production.keyless.technology"
     ></kl-auth>
-    <script src="./node_modules/@keyless/sdk-web-components/elements/auth/auth-element.iife.js"></script>
+    <script src="./node_modules/@keyless/sdk-web-components/index.js" type="module"></script>
     <script>
       const auth = document.querySelector('kl-auth')
 
-      //navigator.clipboard.readText().then(username => {
-        auth.username = "555";
+      auth.addEventListener('error', (event) => {
+        // will log the error code
+        console.log(event.message)
+      })
+
+      navigator.clipboard.readText().then(username => {
+        auth.username = username;
         
         auth.addEventListener('error', (event) => {
           console.log(event.message)
@@ -48,7 +53,7 @@
         auth.addEventListener('finished', (event) => {
           console.log(event.data)
         })
-      //});
+      });
     </script>
   </body>
 </html>

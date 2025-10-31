@@ -34,12 +34,18 @@
       theme="light"
       ws-url="wss://authentication-service-sandbox.eks.core-production.keyless.technology"
     ></kl-enroll>
-    <script src="./node_modules/@keyless/sdk-web-components/elements/enroll/enroll-element.iife.js"></script>
+    <script src="./node_modules/@keyless/sdk-web-components/index.js" type="module"></script>
     <script>
       const enroll = document.querySelector('kl-enroll')
 
-      //const username = `key:${crypto.randomUUID()}`;
-      const username = "555"
+      enroll.addEventListener('error', (event) => {
+        // will log the error code
+        console.log(event.message)
+      })
+
+      const username = `key:${crypto.randomUUID()}`;
+      //const username = "6610e7fc-ea28-4f82-b83f-838615fe12a3";
+
       enroll.username = username;
       navigator.clipboard.writeText(username).then(_ => {
         enroll.addEventListener('error', (event) => {
